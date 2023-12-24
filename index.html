@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Bicho</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 2px;
+            margin: 0;
+            background-image: url('./assets/Remy.png'); /* Substitua 'sua-imagem-de-fundo.jpg' pelo caminho da sua imagem */
+            background-attachment: fixed;
+            background-size: 1136x640px;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        button {
+            padding: 10px 10px;
+            font-size: 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #saldoImage {
+            width: 100px;
+            height: 100px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-4">Jogo do Bicho</h1>
+        <p>Escolha um animal para apostar:</p>
+        <select id="animalSelector" onchange="displayNumbers()" class="form-control mb-3">
+            <option value="avestruz">🐦 Avestruz</option>
+    <option value="aguia">🦅 Águia</option>
+    <option value="burro">🐴 Burro</option>
+    <option value="borboleta">🦋 Borboleta</option>
+    <option value="cachorro">🐶 Cachorro</option>
+    <option value="cabra">🐐 Cabra</option>
+    <option value="carneiro">🐏 Carneiro</option>
+    <option value="camelo">🐫 Camelo</option>
+    <option value="cobra">🐍 Cobra</option>
+    <option value="coelho">🐰 Coelho</option>
+    <option value="cavalo">🐴 Cavalo</option>
+    <option value="elefante">🐘 Elefante</option>
+    <option value="galo">🐓 Galo</option>
+    <option value="gato">🐱 Gato</option>
+    <option value="jacare">🐊 Jacaré</option>
+    <option value="leao">🦁 Leão</option>
+    <option value="macaco">🐒 Macaco</option>
+    <option value="porco">🐷 Porco</option>
+    <option value="pavao">🦚 Pavão</option>
+    <option value="peru">🦃 Peru</option>
+    <option value="touro">🐂 Touro</option>
+    <option value="tigre">🐅 Tigre</option>
+    <option value="urso">🐻 Urso</option>
+    <option value="veado">🦌 Veado</option>
+    <option value="vaca">🐄 Vaca</option>
+        </select>
+
+        <p id="animalNumbers"></p>
+
+        <p>Faça sua aposta:</p>
+        <input type="number" id="betAmount" placeholder="Digite o valor da aposta" class="form-control mb-3">
+
+        <button onclick="play()" class="btn btn-primary">Jogar</button>
+
+        <p id="result" class="mt-3"></p>
+        <p id="prize"></p>
+        <p id="stats" class="mt-4"></p>
+
+        <img id="saldoImage" src="./assets/saldoP.jpg" alt="Imagem de Saldo">
+    </div>
+<!-- Inclusão de bibliotecas JavaScript, como jQuery e Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
